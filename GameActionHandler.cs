@@ -6,11 +6,11 @@ using UnityEngine.Events;
 using UnityEngine.Experimental.UIElements;
 
 
-public abstract class GameActionHandler : MonoBehaviour
+public abstract class GameActionHandler : ScriptableObject
 {
     public GameAction Action;
     
-    private void Awake()
+    private void OnEnable()
     {
         Action.Call += Respond;
     }

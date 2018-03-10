@@ -11,23 +11,23 @@ public class GameAction : ScriptableObject
 	
 	public void ActionCall()
 	{
-		if (CallNoArgs != null) CallNoArgs();
+		CallNoArgs();
 	}
 	
 	
 	//Overloading
 	public void ActionCall(Transform obj)
 	{
-		if (Call != null) Call(obj);
+		Call(obj);
 	}
 	
 	public void ActionCall(int obj)
 	{
-		if (Call != null) Call(obj);
+		Call(obj);
 	}
 	
 	public void ActionCall(string obj)
 	{
-		if (Call != null) Call(obj);
+		Call(obj);
 	}
 }
