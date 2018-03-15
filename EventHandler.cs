@@ -5,27 +5,23 @@ using UnityEngine.Events;
 
 public class EventHandler : MonoBehaviour
 {
-	private void Start()
-	{
-		Event.AddListener(Handler);
-		Event.Invoke();
 
-		StringAction += HandlerToo;
-		StringAction("Words");
+	public GameAction GameAction;
+	public GameActionEvent GameActionEvent;
+
+	private void Awake()
+	{
+		GameAction.Call += Repsond;
+		GameActionEvent.AddListener(Work);
 	}
 
-
-	public UnityEvent Event;
-	public UnityAction<string> StringAction;
-
-	public void Handler()
+	private void Repsond(object obj)
 	{
-		print("Something");
+		GameActionEvent.Invoke(obj);
 	}
-
-	public void HandlerToo(string _s)
+	
+	public void Work(object obj)
 	{
-		print(_s);
+		print(obj as Transform);
 	}
-
 }
