@@ -4,12 +4,11 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-[CreateAssetMenu]
+[CreateAssetMenu(menuName = "Actions/Game Action")]
 public class GameAction : ScriptableObject
 {
 	public UnityAction<object> Call;
 	public UnityAction CallNoArgs;
-	
 	
 	//Overloading
 	public void ActionCall()
@@ -18,6 +17,11 @@ public class GameAction : ScriptableObject
 	}
 	
 	public void ActionCall(Transform obj)
+	{
+		Call(obj);
+	}
+	
+	public void ActionCall(List<Transform> obj)
 	{
 		Call(obj);
 	}
@@ -34,7 +38,6 @@ public class GameAction : ScriptableObject
 
 	public void ActionCall(Text obj)
 	{
-		Debug.Log(obj);
 		var temp = obj.text;
 		Call(temp);
 	}

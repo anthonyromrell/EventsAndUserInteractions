@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CickAction : MonoBehaviour
+//Made By Anthony Romrell
+public class StartActionBehaviour : MonoBehaviour
 {
-
 	public GameAction GameAction;
 
-	private void OnMouseDown()
+	private void Start()
 	{
 		GameAction.Call(transform);
 	}

@@ -6,7 +6,7 @@ using UnityEngine.Events;
 using UnityEngine.Experimental.UIElements;
 
 
-public abstract class GameActionHandler : ScriptableObject
+public abstract class GameActionHandler : MonoBehaviour
 {
     public GameAction Action;
     

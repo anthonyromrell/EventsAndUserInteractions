@@ -2,15 +2,13 @@
 using UnityEngine.Events;
 using UnityEngine.UI;
 
-[CreateAssetMenu(fileName = "TextActionHandler")]
+[CreateAssetMenu(fileName = "TextActionHandler", menuName = "Actions/Game Action")]
 public class TextActionHandler : GameActionHandler
 {
-	public string ObjectText;
-	public UnityEvent Event;
+	public UnityEvent<string> Event;
 
 	protected override void Respond (object obj)
 	{
-		ObjectText = obj as string;
-		Event.Invoke();
+		Event.Invoke((string) obj);
 	}
 }

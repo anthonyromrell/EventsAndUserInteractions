@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace AR.Events
 {
-    public class ClickEvent : MonoBehaviour
+    public class ClickRunEventBehaviour : MonoBehaviour
     {
         public GameEvent Event;
 
