@@ -16,5 +16,4 @@ public abstract class GameActionHandler : MonoBehaviour
     }
 
     protected abstract void Respond(object obj);
-
 }

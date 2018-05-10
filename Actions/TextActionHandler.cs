@@ -1,8 +1,5 @@
-﻿using UnityEngine;
-using UnityEngine.Events;
-using UnityEngine.UI;
+﻿using UnityEngine.Events;
 
-[CreateAssetMenu(fileName = "TextActionHandler", menuName = "Actions/Game Action")]
 public class TextActionHandler : GameActionHandler
 {
 	public UnityEvent<string> Event;
